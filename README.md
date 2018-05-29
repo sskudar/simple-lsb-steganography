@@ -28,7 +28,7 @@
 
   ```
   make
-  ./stegano -d|-e -i input.png [-o output.png] [-h]
+  ./stegano -d|-e -i input.png [-o output.png] [-h]   #e.g. ./stegano -e -i larry.png 
   ```
   
 ### Parameters:
@@ -38,5 +38,5 @@
   -d            decrypt (extract message)
   -e            encrypt (imprint message)
   -i  input     specify input image
-  -o  output    specify output image  (must be lossless, further testing pending)
+  -o  output    specify output image  (must be lossless, further testing pending) - defaults to "output.png"
   ```
