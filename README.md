@@ -1,17 +1,17 @@
 # simple-lsb-steganography
-Simple implementation for LSB steganography in C++
+## Simple implementation for LSB steganography in C++
 
-Dependencies:
+### Dependencies:
 
   OpenCV 2.4.13.6+ (and its dependencies: hdf5 and gtkglext-x11-1.0 - see makefile)
 
-Usage:
+### Usage:
 
   make
   
   "./stegano -d|-e -i input.png [-o output.png] [-h]"
 
-Parameters:
+### Parameters:
 
   -h            help
   
