@@ -29,7 +29,7 @@
   ```
   make
   
-  "./stegano -d|-e -i input.png [-o output.png] [-h]"
+  ./stegano -d|-e -i input.png [-o output.png] [-h]
   ```
   
 ### Parameters:
