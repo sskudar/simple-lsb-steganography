@@ -28,21 +28,15 @@
 
   ```
   make
-  
   ./stegano -d|-e -i input.png [-o output.png] [-h]
   ```
   
 ### Parameters:
 
   ```
-
   -h            help
-  
   -d            decrypt (extract message)
-  
   -e            encrypt (imprint message)
-  
   -i  input     specify input image
-  
   -o  output    specify output image  (must be lossless, further testing pending)
   ```
