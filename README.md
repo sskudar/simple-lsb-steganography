@@ -34,6 +34,8 @@
   
 ### Parameters:
 
+  ```
+
   -h            help
   
   -d            decrypt (extract message)
@@ -43,3 +45,4 @@
   -i  input     specify input image
   
   -o  output    specify output image  (must be lossless, further testing pending)
+  ```
