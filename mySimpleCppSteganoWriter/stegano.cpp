@@ -1,6 +1,5 @@
 #define STB_IMAGE_IMPLEMENTATION
 
-#include "error_util.h"
 #include "steg_header.h"
 
 #include <iostream>
@@ -36,7 +35,7 @@ int main(int argc, char** argv)
     if (argc < MIN_ARGS + 1 || argc > MAX_ARGS + 1) {
         fprintf(stderr, "Usage: %s -d|-e -i input.png [-o output.png] [-h]\n",
             argv[0]);
-        exit(EXIT_F);
+        exit(EXIT_FAILURE);
     }
     output = DEFAULT_OUTPUT;
 
@@ -62,7 +61,7 @@ int main(int argc, char** argv)
             default:
                 fprintf(stderr, "Usage: %s [-i input.png] [-o output.png] [-h]\n",
                     argv[0]);
-                exit(EXIT_F);
+                exit(EXIT_FAILURE);
         }
     }
 
@@ -71,18 +70,18 @@ int main(int argc, char** argv)
     if (argv[optind] != NULL) {
         fprintf(stderr, "Usage: %s [-i input.png] [-o output.png] [-h]\n",
             argv[0]);
-        exit(EXIT_F);
+        exit(EXIT_FAILURE);
     } else if (imprint_flag == 1 && extract_flag == 1) {
         fprintf(stderr, "%s can only imprint or extract at a time, not both.\n",
             argv[0]);
-        exit(EXIT_F);
+        exit(EXIT_FAILURE);
     }
     
     //init input image
     in_img = imread(input, 1);
     if (!in_img.data) {
         fprintf(stderr, "Error while getting input image data.\n");
-        exit(EXIT_F);
+        exit(EXIT_FAILURE);
     } else {
         cout << "Opened image: " << input << endl;
     }
@@ -148,7 +147,7 @@ void imprint(Mat &input, char* msg, string& output_name)
                     if (++ctr > 7) {
                         ctr = 0;
                         bits.erase(bits.begin());
-                        cout << endl;
+                        //cout << endl;
                         if (bits.size() == 0) {
                             goto endenc;
                         }
