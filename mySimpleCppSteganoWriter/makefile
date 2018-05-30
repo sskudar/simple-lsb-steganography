@@ -2,11 +2,10 @@
 PROJECT = stegano 
 
 #svi source fajlovi
-SOURCE = stegano.cpp error_util.c
+SOURCE = stegano.cpp
 
 #svi headeri
-HEADERS = steg_header.h error_util.h
-
+HEADERS = steg_header.h
 CC = g++  	#... ako zelimo kompajler gcc; default je cc
 CFLAGS = -Wall -g
 LDFLAGS =
